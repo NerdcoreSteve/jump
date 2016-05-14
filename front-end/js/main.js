@@ -1,3 +1,4 @@
-var R = require('ramda')
+var ctx = document.getElementById('jump-canvas').getContext('2d')
 
-console.log(R.map((x) => 2 * x, [1, 2, 3, 4]))
+ctx.fillStyle = '#FF0000'
+ctx.fillRect(0,0,150,75)

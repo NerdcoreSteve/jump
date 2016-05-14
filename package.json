@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
-    "build": "browserify front-end/js/main.js -o public/js/main.js  -t [ babelify --presets [ es2015 ] ]"
+    "build": "browserify front-end/js/main.js -o public/js/main.js  -t [ babelify --presets [ es2015 ] ]",
+    "lint": "eslint *.js front-end/js/*.js"
   },
   "repository": {
     "type": "git",
