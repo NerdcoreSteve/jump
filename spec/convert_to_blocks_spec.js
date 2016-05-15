@@ -1,3 +1,5 @@
+var R = require('ramda')
+
 describe('convert_to_blocks', () => {  
     var convert_to_blocks = require('../front-end/js/convert_to_blocks.js')
 
@@ -8,8 +10,9 @@ describe('convert_to_blocks', () => {
         empty_space: ' '
     }
 
-    var level_1 = '@   ++ ^^'
+    var level_1 = '@ +^'
 
-    it('should return an object',
-        () => expect(typeof convert_to_blocks(char_key, level_1)).toEqual('object'))
+    it('should return an array of objects the same length of the given string',
+        () => expect(R.map((x) => typeof x, convert_to_blocks(char_key, level_1)))
+            .toEqual(['object', 'object', 'object', 'object']))
 })
